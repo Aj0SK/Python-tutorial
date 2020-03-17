@@ -18,6 +18,8 @@
 \tableofcontents
 \newpage
 
+Ahoj, pred oči sa ti dostal Python tutoriál napísaný pri príležitosti Online Školy Programovania 2020. Jeho autormi sú Roman a Andrej (Andrej a Roman), za proofread ďakujeme Žabovi. Ak v tutoriále nájdeš nejaké chyby alebo pasáže, ktoré sme nie zrovna dobre podali, neváhaj nás kontaktovať. Ako môžeš spoznať zle napísanú pasáž? Tak, že ani po niekoľkonásobnom prečítaní nerozumieš tomu, čo text, resp. kód znamená. Kontaktovať nás môžeš buď na Discorde pod nickom sobkulir a Aj0SK alebo na adresách andrejkorman@gmail.com a r.sobkuliak@gmail.com.
+
 \section{Úvod}
 Predtým ako s Pythonom začneme, je dôležité zodpovedať niekoľko otázok. Prvá a najdôležitejšia je, čo je programovanie. Programovanie je vytváranie programov, ktoré na počítači vieme spustiť a majú nejakú funkciu. Príkladom programu môže byť aplikácia na četovanie, webový prehliadač ale aj niečo jednoduchšie, ako napríklad kalkulačka. Dôležité na programoch je, že majú vstup a výstup. Pre program fungujúci ako kalkulačka môže byť vstupom matematický výraz typu $5+3\cdot 7$ a výstupom hodnota tohto výrazu $26$. My sa v tomto tutoriále budeme venovať jednoduchým programom. V prípade kalkulačky na vašom počítači ste zrejme zvyknutí zadať matematiký výraz pomocou tlačidiel, teda nejakého grafického rozhrania (tlačidlá, okná a podobne). Takéto rozhranie naše programy nebudú mať, čo ich mimochodom značne skracuje. Vstup aj výstup bude teda v textovej podobe.
 
@@ -155,7 +157,35 @@ string & reťazec znakov & "abc", 'abc' \\ \hline
 \end{tabular}
 \smallskip
 
-%%%% TODO: kecy o ==, operatoroch a co vracaju
+Ďalším dôležitým pojmom je \texttt{operátor}. Spomenuli sme si už premenné aj to, že majú rôzne typy a vieme ich použiť v akýchsi výrazoch. Pod výrazom myslíme napr. $5\*x + 20 + y$. Tento výraz sa vyhodnotí a vráti sa nám číslo a teda by sme vedeli napísať napr. $vysledok = 5\*x + 20 + y$. V tomto výraze používame operátor $+$ dva krát. $+$ vezme vec napravo, naľavo, sčíta ich a vráti nám výsledok. Python má samozrejme viac operátorov. Niektoré už poznáte ako napr. $-$, $//$, $*$... Vieme už aj o tom, že rovnaký operátor môže fungovať inak keď má napravo a naľavo iné typy a teda vracia aj rôzne typy.
+
+\lstlang{python}\begin{lstlisting}
+a, b = 2, 12
+c = a+b # c bude 14, + tu vracia cele cislo
+r1 = "Ano"
+r2 = "Nie"
+r3 = r1 + r2 # r3 bude "AnoNie", + vracia retazec
+r4 = a * r1 # r4 bude "AnoAno", + vracia retazec
+\end{lstlisting}
+
+Aké ešte operátory existujú? Dôležitým typom v programovaní je typ \texttt{bool}. Ten môže reprezentovať iba dve hodnoty a to \texttt{True} a \texttt{False}. Dôležitosť tohto typu sa naplno prejaví v kapitole o podmienkach. Príklad použitia:
+
+\lstlang{python}\begin{lstlisting}
+a = True
+b = False
+print(a)
+print(b)
+\end{lstlisting}
+
+Operátory, ktorým sme sa doteraz venovali vracali buď celé číslo alebo reťazec. Dôležitými operátormi sú aj tie, ktoré vracajú bool a to $==$ a $!=$. Prvý funguje ako porovnanie, vráti True vtedy keď sa vec napravo a naľavo rovnajú. Druhý je jeho presnou negáciou a teda opakom, vrátu True ak sa vec napravo a naľavo nerovnajú. Príklady použitia:
+
+\lstlang{python}\begin{lstlisting}
+a, b = 5, 10
+c = (a==b) # v c je False
+d = (a==5) # v d je True
+e = (a!=b) # v e je True
+# pre citatelnost sme vyrazy napravo od = dali do zatvorky
+\end{lstlisting}
 
 \section{Načítavanie vstupu a výpis výstupu}
 
@@ -828,6 +858,10 @@ print(a)
 
 \subsection{Príklady}
 \href{https://testovac.ksp.sk/tasks/ls-uvod-tlacitka/}{Úloha 1}
+
+\section{Záver}
+
+Super! Ak si to dotiahol až sem a popri tom urobil všetky úlohy tak máš solídne základy v jazyku Python. Veríme, že tvoja programátorská cesta tu nekončí. Čaká ťa totiž veľa zaujimávych príležitostí, kde svoju znalosť jazyka Python môžeš ďalej prehĺbiť. Ďakujeme, že si čítal náš tutoriál a najväčším poďakovaním bude ak nám povieš, čo v ňom môžeme zlepšiť aby sa ďalším čitateľom čítal jednoduchšie. Kontaktovať nás môžeš buď na Discorde pod nickom sobkulir a Aj0SK alebo na adresách andrejkorman@gmail.com a r.sobkuliak@gmail.com. Tiež nás kontaktuj ak nevieš kam s tvojimi znalosťami ďalej :)
 
 % \nadpis{Slovník}
 % argument
