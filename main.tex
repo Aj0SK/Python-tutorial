@@ -19,9 +19,9 @@
 \newpage
 
 \section{Úvod}
-Predtým ako s Pythonom začneme, je dôležité zodpovedať niekoľko otázok. Prvá a najdôležitejšia je, čo je programovanie. Programovanie je vytváranie programov, ktoré na počítači vieme spustiť a majú nejakú funkciu. Príkladom programu môže byť aplikácia na četovanie, webový prehliadač ale aj niečo jednoduchšie, ako napríklad kalkulačka. O programoch platí, že majú vstup a výstup. Pre program fungujúci ako kalkulačka môže byť vstupom matematický výraz typu $5+3\cdot 7$ a výstupom hodnota tohto výrazu $26$. My sa v tomto tutoriále budeme venovať jednoduchým programom. V prípade kalkulačky na vašom počítači ste zrejme zvyknutí zadať matematiký výraz pomocou tlačidiel, teda nejakého grafického rozhrania (tlačidlá, okná a podobne). Takéto rozhranie naše programy nebudú mať, čo ich mimochodom značne skracuje. Vstup aj výstup bude teda v textovej forme.\\
+Predtým ako s Pythonom začneme, je dôležité zodpovedať niekoľko otázok. Prvá a najdôležitejšia je, čo je programovanie. Programovanie je vytváranie programov, ktoré na počítači vieme spustiť a majú nejakú funkciu. Príkladom programu môže byť aplikácia na četovanie, webový prehliadač ale aj niečo jednoduchšie, ako napríklad kalkulačka. Dôležité na programoch je, že majú vstup a výstup. Pre program fungujúci ako kalkulačka môže byť vstupom matematický výraz typu $5+3\cdot 7$ a výstupom hodnota tohto výrazu $26$. My sa v tomto tutoriále budeme venovať jednoduchým programom. V prípade kalkulačky na vašom počítači ste zrejme zvyknutí zadať matematiký výraz pomocou tlačidiel, teda nejakého grafického rozhrania (tlačidlá, okná a podobne). Takéto rozhranie naše programy nebudú mať, čo ich mimochodom značne skracuje. Vstup aj výstup bude teda v textovej podobe.
 
-Keď už vieme čo je program a chceme programovať, potrebujeme vedieť ako taký program vytvoriť. Na to slúžia, ako už isto tušíte, programovacie jazyky. Tie nám dovoľujú vytvoriť postupnosť príkazov, ktoré má daný program vykonať. Po spustení dostane program nejaký vstup a vyprodukuje naň odpoveď (výstup), ktorú typicky nejako zobrazí, napr. vypíše.
+Keď už vieme čo je program a chceme programovať, potrebujeme vedieť ako taký program vytvoriť. Na to slúžia, ako už isto tušíte, programovacie jazyky. Tie nám dovoľujú vytvoriť postupnosť príkazov, ktoré po spustení daný program vykoná. Program od nás po spustení dostane nejaký vstup a vyprodukuje naň odpoveď (výstup), ktorú typicky nejako zobrazí, napr. vypíše.
 
 \subsection{Prečo Python?}
 Programovacích jazykov existuje neúrekom, my sme vybrali zrovna Python. Prečo? Myslíme si, že jeho príkazy sú prirodzené a zároveň je široko využívaný v praxi. Podľa \href{https://insights.stackoverflow.com/survey/2019#technology-_-programming-scripting-and-markup-languages}{dotazníku StackOverflow z roku 2019} je to druhý najpopulárnejší programovací jazyk. Python vám teda otvorí dvere do mnohých zákutí informatiky :)
@@ -46,8 +46,8 @@ Následne program uložte pomocou \texttt{File -> Save} do ľubovoľného prieč
 V tomto programe používame funkciu \texttt{print}. Vieme asi uhádnuť, čo táto funkcia robí -- vypisuje na výstup to, čo je vo vnútri zátvoriek. Napriek tomu by však bolo vhodné vysvetliť, čo je \textit{funkcia}. Ak vám to nebude úplne jasné, nezúfajte, funkcie sú pomerne zložitá vec, ktorej sa bližšie venuje kapitola 10.
 Funkcia je nejaká menšia postupnosť príkazov, ktorá sa natoľko opakuje alebo je logicky ucelená, že dostala názov. Vlastne je to taký malý program v programe. Funkcii zväčša dáme niekoľko \textit{parametrov}, teda jej odovzdáme na čom má vykonať operáciu na ktorú je určená.
 
-Vyššie vidíme, že \texttt{print} je funkcia, ktorá má ako parameter to, čo chceme vypísať. Pozrite sa na výstup programu a zamyslite sa, ktoré riadky vás prekvapili. Je logické, že sa výraz $15 / 10$ nevyhodnotil na celé číslo. Špeciálnu pozornosť si zaslúži aj výraz $15 // 10$. Dve delenia v Pythone označujú často používané tzv. celočíselné delenie, teda delenie bezozvyšku. $x // y$ vieme interpretovať ako najviac koľkokrát sa zmestí $y$ do $x$? Inak povedané ide o klasické delenie s tým, že vynecháme všetko za desatinnou čiarkou.
-Nakoniec výraz $7 \% 3$ kde \% označuje zvyšok po delení. Označuje teda tú časť, ktorá ostane po celočíselnom delení. $7//3=2$ a teda ostalo $7 - 2 \cdot 3 = 1$.
+Vyššie vidíme, že \texttt{print} je funkcia, ktorá má ako parameter to, čo chceme vypísať. Pozrite sa na výstup programu a zamyslite sa, ktoré riadky vás prekvapili. Je logické, že sa výraz $15 / 10$ nevyhodnotil na celé číslo. Špeciálnu pozornosť si zaslúži aj výraz $15 // 10$. Dve delenia v Pythone označujú často používané tzv. celočíselné delenie, teda delenie bezozvyšku. $x // y$ vieme interpretovať ako: "Najviac koľkokrát sa zmestí $y$ do $x$?" Inak povedané ide o klasické delenie s tým, že vynecháme všetko za desatinnou čiarkou.
+Zrejme je pre vás novým ešte výraz $7 \% 3$ kde \% označuje zvyšok po delení. Výsledkom tejto operácie je tá časť čísla čo z neho "ostane" po celočíselnom delení. $7\%3=1$ a to preto, že $7//3=2$ a to čo zostalo vieme vyjadriť ako $7 - 2 \cdot 3 = 1$.
 
 V tomto programe sme si v skutočnosti iba ukázali, že \texttt{print} vie vypísať číslo. Všetky výrazy obsahujúce základné matematické operácie sa totiž priamo vyhodnotia na číslo a úlohou \texttt{print} je už len vypísať dané číslo. \texttt{print} vie ale toho samozrejme viac. Skopírujte si do vášho súboru s kódom nasledovný program:
 
@@ -60,9 +60,9 @@ print("2" + "3")
 
 Na prvom riadku vidíme, že vieme vypísať aj text. Takýto text v Pythone nazývame \textit{reťazec znakov} alebo skrátene \textit{reťazec}. Ide o znaky ohraničené úvodzovkami, teda \texttt{\textquotedbl<text>\textquotedbl} alebo \texttt{\textquotesingle<text>\textquotesingle}. Všimnite si, že nezavísi na tom, či použijeme "obyčajné úvodzovky", teda \texttt{\textquotedbl}, alebo apostrof, teda \textquotesingle. Najčastejšie keď hovoríme v Pythone o znakoch, myslíme tým anglickú abecedu, číslice, interpunkciu, zátvorky a podobne. V tomto texte vôbec nepracujeme s dĺžňami, mäkčeňmi a slovenskou abecedou.
 
-V druhom riadku vidíme, že podobne ako čísla, reťazce vieme sčítavať. Čo urobí znamienko plus v tomto prípade je, že zlepí reťazce za seba. Ako je možné, že výsledok 3. a 4. riadku sa líši? Dôvodom je, že v prvom prípade ide o plus, . V druhom prípade sme úvodktoré sa aplikuje na čísla, kedže Python vidí, že naľavo aj napravo od plus sa nachádzajú číslazovkami okolo čísel dali najavo, že chceme tieto čísla reprezentovať ako reťazce a Pythonu teda neostáva nič iné, ako použiť plus pre reťazce.
+V druhom riadku vidíme, že podobne ako čísla, reťazce vieme sčítavať. Čo urobí znamienko plus v tomto prípade je, že zlepí reťazce za seba. Ako je možné, že výsledok 3. a 4. riadku sa líši? Dôvodom je, že v prvom prípade ide o plus aplikované na čísla. V druhom prípade sme aplikovali plus na reťazce. Python vidí, že naľavo aj napravo od plus sa nachádzajú čísla s úvodzovkami okolo čím sme dali najavo, že chceme tieto čísla reprezentovať ako reťazce a Pythonu teda neostáva nič iné, ako použiť plus pre reťazce.
 Keď sa pokúsime tieto dve reprezentácie skombinovať a 
-napíšeme:
+napíšeme
 
 \lstlang{python}\begin{lstlisting}
 print(2 + "3")
@@ -79,7 +79,7 @@ print(2 * "Ahoj!")
 # Vystup: Ahoj!Ahoj!
 \end{lstlisting}
 
-Posledná vec, ktorá sa týka príkazu \texttt{print} je, že sme si mohli už skôr všimnúť, že po tom, čo tento príkaz vypíše čo sme mu prikázali, ďalšie zavolanie funkcie \texttt{print} v rovnakom programe píše na ďalší riadok. Teraz vám niečo prezradíme. To, že text skočí na ďalší riadok je spôsobené tým, že sa v texte, ktorý vypisujete skrýva znak, ktorý nie je tlačiteľný, teda ho nie je vidieť ale spôsobí, že text za ním je na novom riadku. Tento znak vieme zapísať ako \texttt{\textbackslash n}. Vyskúšať si to môžete tak, že do programu napíšete príkaz:
+Posledná vec, ktorá sa týka príkazu \texttt{print} je, že po tom, čo tento príkaz vypíše čo sme mu prikázali, ďalšie zavolanie funkcie \texttt{print} v rovnakom programe píše na ďalší riadok. Teraz vám niečo prezradíme. To, že text skočí na ďalší riadok je spôsobené tým, že sa v texte, ktorý vypisujete skrýva znak, ktorý nie je tlačiteľný, teda ho nie je vidieť ale spôsobí, že text za ním je na novom riadku. Tento znak vieme zapísať ako \texttt{\textbackslash n}. Vyskúšať si to môžete tak, že do programu napíšete príkaz:
 
 \lstlang{python}\begin{lstlisting}
 print("Tu bude novy riadok->\n a aj tu->\n bol novy riadok.")
@@ -111,11 +111,37 @@ print("na rovnakom riadku.")
 
 \section{Premenné}
 
-% TODO (Žaba): toto som si nie istý, ako má byť použité. Lebo ak ako ťahák po prednáške fajn, ak len tak na čítanie, tak som sa zrovna trochu stratil. Priveľa informácií, primálo príkladov. Napr. typy by som sem neťahal (v tom Pythone obzvlášť). Skôr čo je premenná, meno a hodnota, ako ju vytvoriť, že = sa znamená "priradiť do" (s týmto majú začiatočníci dosť problém pochopiť) a že to nie je obojstranné a možno taký ten pokec, že ako to funguje, že v krabičke je hodnota, keď zavolám to meno, tak sa pozriem do tej krabičky. Typy by som možno na konci spomenul, že toto sa tam najčastejšie pchá, Python to rieši za mňa, je fajn poznať skratky kvôli chybovým hláškam (viď vyššie) a takisto načítavanie.
+Program si k svojmu chodu potrebuje často pamätať nejaké informácie. Či už je to vstup, ktorý programu užívateľ zadal alebo nejaké medzivýsledky výpočtu, ktorý program vykonáva. V Pythone na toto slúžia premenné. Premenná je krabička (miesto v pamäti počítača), kde si program ukladá dáta. Naviac je táto krabička pomenovaná. Akonáhle sa vytvorí krabička s názvom napríklad $x$, vieme do nej uložiť číslo pomocou \texttt{=}.
 
-Program si k svojmu chodu potrebuje často pamätať nejaké informácie. Či už je to vstup, ktorý programu užívateľ zadal alebo nejaké medzivýsledky výpočtu, ktorý program vykonáva. V Pythone na toto slúžia premenné. Premenná je krabička (miesto v pamäti počítača), kde si program ukladá dáta. Každá premenná má svoj
-\texttt{typ} (určuje, aké dáta sa tam dávajú), \texttt{meno} (jednoznačný identifikátor) a
-samozrejme obsahuje \texttt{hodnotu} príslušného typu.
+\lstlang{python}\begin{lstlisting}
+x = 4   # do krabicky x vlozime cislo 4
+\end{lstlisting}
+
+Neskôr potom vieme použiť hodnotu v tejto krabičke napríklad takto:
+
+\lstlang{python}\begin{lstlisting}
+print(4*x)   # pri vyhodnocovani vyrazu sa x nahradi 4
+\end{lstlisting}
+
+Do krabičky môžeme hodnotu vložiť a použiť ju aj opakovane.
+
+\lstlang{python}\begin{lstlisting}
+a = 10
+print(4*x)   # vypise: 40
+a = 7
+print(4*x)   # vypise: 28
+\end{lstlisting}
+
+Zatiaľ sme zatajili ako sa taká premenná vytvára. Tajomstvom je, že python premennú vytvorí automaticky keď jej prvý krát priradíme nejakú hodnotu. Na vytvorenie premennej a priradenie hodnoty do nej teda stačí napísať:
+
+\lstlang{python}\begin{lstlisting}
+a = 4   # do a priradime 4, premenna a sa pritom vytvori
+b = 2 * a - 3   # do b priradim hodnotu vyrazu napravo, teda 5
+c, d = 10, 12   # vieme robit aj viac priradeni naraz (c = 10 a d = 12)
+a = 8 # zmenili sme hodnotu a, teraz sa uz premenna znova nevytvorila
+\end{lstlisting}
+
+Na začiatku sme hovorili, že do premennej si program ukladá dáta avšak doteraz sme iba ukázali, ako do premennej vložiť číslo. Rôzne typy dát sa nazývajú v programovacích jazykoch aj \texttt{typy}. My sme sa zatiaľ v tomto tutoriále skryto stretli s dvomi typmi. Prvým bolo celé číslo alebo tiež \texttt{int}. Druhým reťazec alebo \texttt{string}. V nasledujúcej tabuľke prinášame aké základné typy v Pythone existujú.
 
 \smallskip
 \begin{tabular}{|l|l|l|l|}
@@ -128,14 +154,6 @@ string & reťazec znakov & "abc", 'abc' \\ \hline
 žiadny & ani jeden z typov & \texttt{None} \\ \hline
 \end{tabular}
 \smallskip
-
-Premenné v Pythone netreba pred použitím vytvoriť, stačí konkrétnej premennej priradiť hodnotu a premennú za nás vytvorí počítač. Pomocou \texttt{=} vieme do premennej uložiť novú hodnotu alebo výraz zložený z matematických operátorov a iných premenných.
-
-\lstlang{python}\begin{lstlisting}
-a = 4   # do a priradime 4
-b = 2 * a - 3   # do b priradim hodnotu vyrazu napravo, teda 5
-c, d = 10, 12   # vieme robit aj viac priradeni naraz (c = 10 a d = 12)
-\end{lstlisting}
 
 %%%% TODO: kecy o ==, operatoroch a co vracaju
 
@@ -806,7 +824,7 @@ zmen(a)
 print(a)
 \end{lstlisting}
 
-Čakali by sme, že sa $a$ nezmení avšak tentokrát je $a$ \texttt{list}. Prečo sa v tomto prípade zmenila hodnota $a$? Je to z dôvodu, že do funkcie bola v tomto prípade poslaná nie kópia listu ale priamo list $a$. Je trochu nelogické, prečo sa python správa rôzne pri rôznych typoch. Je to napríklad z dôvôdu, že listy sú zväčša pomerne veľké, zaberajú viac miesta a teda aj ich kopírovanie je pomalé a Python sa mu snaží vyhnúť. Je dôležité si na toto správanie dávať pozor a keď je to dôležité, vyskúšať ako sa Python správa pre konkrétny typ. Pokiaľ by sme vyskúšali vyššie uvedený program napríklad pre reťazec, zistili by sme, že spôsobí rovnaké správanie ako keď je parametrom číslo, teda Python reťazce kopíruje.
+Čakali by sme, že sa $a$ nezmení avšak tentokrát je $a$ \texttt{list}. Prečo sa v tomto prípade zmenila hodnota $a$? Je to z dôvodu, že do funkcie bola v tomto prípade poslaná nie kópia listu ale priamo list $a$. Je trochu nelogické, prečo sa python správa rôzne pri rôznych typoch. Je to napríklad z dôvôdu, že listy sú zväčša pomerne veľké, zaberajú viac miesta a teda aj ich kopírovanie je pomalé a Python sa mu snaží vyhnúť. Je dôležité si na toto správanie dávať pozor a keď je to dôležité, vyskúšať ako sa Python správa pre konkrétny typ.
 
 \subsection{Príklady}
 \href{https://testovac.ksp.sk/tasks/ls-uvod-tlacitka/}{Úloha 1}
