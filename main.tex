@@ -35,6 +35,7 @@ Použijeme preto jednoduchý editor s názvom \texttt{Python IDLE}, ktorého aut
 \section{Prvé programy a \texttt{print}}
 Keď už máme Python nainštalovaný, otvoríme program Python IDLE. To je editor, v ktorom budeme písať naše programy. Zvoľte \texttt{File -> New File} a do nového okna, ktoré sa otvorilo, skopírujte program:
 \lstlang{python}\begin{lstlisting}
+# Prvy program v Pythone
 print(5)
 print(5+2+7)
 print(7-10)
@@ -44,6 +45,8 @@ print(15//10)
 print(7%3)
 \end{lstlisting}
 Následne program uložte pomocou \texttt{File -> Save} do ľubovoľného priečinku. Odporúčame vám, aby ste si vytvorili samostatný priečinok, do ktorého budete vaše programy ukladať. Teraz program môžete spustiť pomocou \texttt{Run -> Run Module} alebo stlačením \texttt{F5}. 
+
+Prvý riadok nie je nijak dôležitý ale je potrebné vysvetliť o čo ide. V kóde sa všetko považuje za príkaz a teda by v ňom bolo ťažké zanechať nejakú informáciu pre čitateľa. Na zanechanie komentára, teda nejakého textu pre človeka, ktorý kód číta slúži znak $\#$. Všetko čo napíšeme zaň sa považuje iba za komentár a Python to odignoruje. My vám za týmto znakom budeme zanechávať nejaké odkazy pre vaše lepšie porozumenie naším príkladom. A teraz už poďme na to podstatné.
 
 V tomto programe používame funkciu \texttt{print}. Vieme asi uhádnuť, čo táto funkcia robí -- vypisuje na výstup to, čo je vo vnútri zátvoriek. Napriek tomu by však bolo vhodné vysvetliť, čo je \textit{funkcia}. Ak vám to nebude úplne jasné, nezúfajte, funkcie sú pomerne zložitá vec, ktorej sa bližšie venuje kapitola 10.
 Funkcia je nejaká menšia postupnosť príkazov, ktorá sa natoľko opakuje alebo je logicky ucelená, že dostala názov. Vlastne je to taký malý program v programe. Funkcii zväčša dáme niekoľko \textit{parametrov}, teda jej odovzdáme na čom má vykonať operáciu na ktorú je určená.
@@ -108,9 +111,9 @@ print("na rovnakom riadku.")
 # Zostavame na rovnakom riadku.
 \end{lstlisting}
 
-\nadpis{Priklad}
+\nadpis{Priklady}
 
-Na konci kapitoly nájdeš vždy sadu úloh, ktoré by si si mal vyriešiť predtým ako budeš pokračovať. Úlohy slúžia na preverenie tvojich schopností a zväčša sa stupňujú v obtiažnosti. V tejto kapitole sme si pre teba prichystali iba jednu úlohu: \href{https://testovac.ksp.sk/tasks/ls-uvod-ahoj/}{Úloha 1}
+Na konci kapitoly nájdeš vždy sadu úloh, ktoré by si si mal vyriešiť predtým ako budeš pokračovať. Úlohy slúžia na preverenie tvojich schopností a zväčša sa stupňujú v obtiažnosti. V tejto kapitole sme si pre teba prichystali iba jednu úlohu: \href{https://testovac.ksp.sk/tasks/ls-uvod-ahoj/}{Ahoj}
 
 Zrejme si však nikdy ešte neodovzával program na náš testovač a tak ti celý proces v skratke vysvetlíme. Testovač je náš server, kam pošleš svoj program, ktorý rieši nejakú úlohu. Náš testovač tvoj program spustí na rôznych vstupoch a zistí, či robí naozaj to, čo sa v zadaní požaduje. Poďla toho ho ohodnotí OK, WA (wrong answer, nesprávna odpoveď), prípadne nejak inak. Všetky možné výsledky odovzdávania nájdeš v sekcii \texttt{Odpovede testovača}. Neboj sa, o nič nejde a môžeš odovzdávať ľubovoľne veľakrát. Neodporúčame ti ale zaseknúť sa a hodinu riešiť ten istý príklad. Pokiaľ ti príklad nejde a začínaš byť frustrovaný ozvi sa na \href{https://discord.gg/QKgNmW9}{Discorde} v časti začiatočníci alebo napíš priamo jednému z užívaťeľov sobkulir a Aj0SK a my ti radi poradíme.
 
@@ -213,6 +216,13 @@ e = (a!=b) # v e je True
 # pre citatelnost sme vyrazy napravo od = dali do zatvorky
 \end{lstlisting}
 
+Ďalšími užitočnými operátoromi, vracajúcimi bool sú $<$, $>$, $>=$ a $<=$. Príklad použitia.
+
+\lstlang{python}\begin{lstlisting}
+vysl1 = 5>3 # vysl1 bude True
+vysl2 = 7<=8 # vysl2 bude True
+\end{lstlisting}
+
 \section{Načítavanie vstupu a výpis výstupu}
 
 % TODO (Žaba): tá vec so zmenou by sa mi dosť páčila príkladovo spraviť. Že vyskúšajme si vyriešiť že máš číslo a vypočítaj obsah štvorca s takou hranou, spravíš reťazec*reťazec, dostaneš chybovú hlášku peknú a na tom vysvetlíš, že aha, toto je zle a takto fixnem.
@@ -253,16 +263,16 @@ print(a)
 # a potom druhy print prida 10 (s koncom riadku).
 \end{lstlisting}
 
-\nadpis{Priklad}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-cislo/}{Úloha 1}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-zamena/}{Úloha 2}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-obdlznik1/}{Úloha 3}
+\nadpis{Priklady}
+\href{https://testovac.ksp.sk/tasks/ls-uvod-cislo/}{Číslo},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-zamena/}{Zámena},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-obdlznik1/}{Obdĺžnik 1}
 
 \section{Podmienky}
 
 Často sa stane, že program potrebuje urobiť nejaké rozhodnutie. Program je vec, ktorá sa správa pri každom spustení rovnako, nie však na každom vstupe. To znamená, že ten istý vstup vždy spôsobí rovnaké správanie programu. Kedže ale programu pri rôznych spusteniach rôzne vstupy je nutné aby na ne program nejako zareagoval. Často napríklad chceme aby sa určitý kód spustil iba za splnenia nejakých podmienok. Príkladom môže byť program, ktorý vypíše, či číslo na vstupe je alebo nie je 0. Vhodným prostriedkom na dosiahnutie tohto správania programu je príkaz \texttt{if}. Ten
 zjednodušene vyzerá \texttt{if <podmienka>: <prikaz>}. To znamená, že ak platí \texttt{<podmienka>}
-vykonaj \texttt{<príkaz>}. \textbf{Nezabudnite}, že porovnávanie dvoch vecí sa vykonáva pomocou
+vykonaj \texttt{<príkaz>}. \texttt{<podmienka>} je v tomto prípade akýkoľvek výraz vracajúci \texttt{bool}, teda True alebo False. \textbf{Nezabudnite}, že porovnávanie dvoch vecí sa vykonáva pomocou
 \textbf{dvoch} rovná sa \texttt{(==)} a nie jedného\texttt{(=)}.
 
 \lstlang{python}\begin{lstlisting}
@@ -274,8 +284,6 @@ if x != 0:
 \end{lstlisting}
 
 V predchádzajúcom príklade je vidieť ešte jednu dôležitú vec a to odsadenie príkazov. Hovoríme o viditeľnej medzere v 3. a 5. riadku. Odsadením hovoríme pythonu, že tento príkaz patrí k predchádzajúcej podmienke. Je to dôležité z toho dôvodu, keby chceme napr. pri splnení prvej podmienky vykonať viac ako jeden príkaz. V tomto prípade by stačilo len dopísať rovnako odsadený príkaz:
-
-% (fixed) TODO (Žaba): tu by mohlo byť zaujímavé ukázať aj druhú možnosť, kde ten spodný print() nie je odsadený, ako sa to líši a vysvetliť.
 
 \lstlang{python}\begin{lstlisting}
 # Program zisti, ci je na vstupe 0.
@@ -362,13 +370,13 @@ if (meno == 'Jozko') or (meno == 'Maria'):
 \end{lstlisting}
 
 \nadpis{Priklad}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-rovnake/}{Úloha 1}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-znamienko/}{Úloha 2}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-najmensi/}{Úloha 3}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-prostredny/}{Úloha 4}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-priemer/}{Úloha 5}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-zvysok/}{Úloha 6}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-nenajvacsi/}{Úloha 7}
+\href{https://testovac.ksp.sk/tasks/ls-uvod-rovnake/}{Rovnaké},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-znamienko/}{Znamienko},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-najmensi/}{Najmenší},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-prostredny/}{Prostredný},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-priemer/}{Priemer},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-zvysok/}{Zvyšok},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-nenajvacsi/}{Nenajväčší}
 
 \section{Cykly}
 V programe potrebujeme často nejakú časť príkazov opakovať viackrát. Napríklad ak by sme potrebovali vypísať čísla od 1 do 5, s doterajšími znalosťami by sme vytvorili nasledovný program.
@@ -410,7 +418,7 @@ Teraz už rozumieme hlavičke \texttt{for}-cyklu. Samotné vykonávanie funguje 
 
 Funkcia \texttt{range} má 3 varianty, vďaka ktorým vieme vytvoriť prefíkanejšie cykly:
 \begin{itemize}
-  \item \texttt{range(kon)} - vytvorí rozsha s prvkami od $0$ po $kon - 1$ vrátane.
+  \item \texttt{range(kon)} - vytvorí rozsah s prvkami od $0$ po $kon - 1$ vrátane.
   \item \texttt{range(zac, kon)} - vytvorí rozsah s prvkami od $zac$ po $kon - 1$ vrátane.
   \item \texttt{range(zac, kon, k)} - vytvorí rozsah s prvkami od $zac$ po $kon - 1$ vrátane,
   obsahujúc každé $k$-te číslo.
@@ -470,13 +478,13 @@ for i in range(7):
 \end{lstlisting}
 
 \subsection{Príklady}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-cykly/}{Úloha 1}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-pasik/}{Úloha 2}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-obdlznik2/}{Úloha 3}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-trojuholnik/}{Úloha 4}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-pyramida/}{Úloha 5}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-najvacsi/}{Úloha 6}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-fibonacci/}{Úloha 7}
+\href{https://testovac.ksp.sk/tasks/ls-uvod-cykly/}{Cykly},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-pasik/}{Pásik},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-obdlznik2/}{Obdĺžnik 2},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-trojuholnik/}{Trojuholník},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-pyramida/}{Pyramída},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-najvacsi/}{Najväčší},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-fibonacci/}{Fibonacci}
 
 \section{List}
 
@@ -606,9 +614,9 @@ print(mesiace[n])
 \end{lstlisting}
 
 \subsection{Príklady}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-zvacsi2/}{Úloha 1}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-sucetmensich/}{Úloha 2}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-pocetnajmensich/}{Úloha 3}
+\href{https://testovac.ksp.sk/tasks/ls-uvod-zvacsi2/}{Zväčši 2},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-sucetmensich/}{Súčet menších},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-pocetnajmensich/}{Počet najmenších}
 
 \section{Vnorené cykly}
 
@@ -683,7 +691,7 @@ Teraz napíšeme program, ktorý vypíše telo takejto tabuľky. Ako by sme post
 
 Všimnite si, že pre každý riadok prejdeme vždy všetky stĺpce. Môžeme si to predstaviť ako cyklus cez riadky od $1$ do $4$, v ktorom je navyše \textit{vnorený} cyklus cez stĺpce od $1$ do $4$.
 \lstlang{python}\begin{lstlisting}
-# Vypis cisel od 0 do 7.
+# Vypis tabulky nasobilky velkosti 5x5.
 for i in range(1, 5):
   for j in range(1, 5):
     # Medzeru medzi cislami nevypisujeme pred prvym cislom v riadku
@@ -798,10 +806,10 @@ print(tabulka)
 \end{lstlisting}
 
 \subsection{Príklady}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-rozdiel/}{Úloha 1}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-suctovapyramida/}{Úloha 2}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-vymena/}{Úloha 3}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-otocenie/}{Úloha 4}
+\href{https://testovac.ksp.sk/tasks/ls-uvod-rozdiel/}{Rozdiel},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-suctovapyramida/}{Súčtová pyramída},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-vymena/}{Výmena},
+\href{https://testovac.ksp.sk/tasks/ls-uvod-otocenie/}{Otočenie}
 
 \section{Funkcie}
 
@@ -883,7 +891,7 @@ print(a)
 Čakali by sme, že sa $a$ nezmení avšak tentokrát je $a$ \texttt{list}. Prečo sa v tomto prípade zmenila hodnota $a$? Je to z dôvodu, že do funkcie bola v tomto prípade poslaná nie kópia listu ale priamo list $a$. Je trochu nelogické, prečo sa python správa rôzne pri rôznych typoch. Je to napríklad z dôvôdu, že listy sú zväčša pomerne veľké, zaberajú viac miesta a teda aj ich kopírovanie je pomalé a Python sa mu snaží vyhnúť. Je dôležité si na toto správanie dávať pozor a keď je to dôležité, vyskúšať ako sa Python správa pre konkrétny typ.
 
 \subsection{Príklady}
-\href{https://testovac.ksp.sk/tasks/ls-uvod-tlacitka/}{Úloha 1}
+\href{https://testovac.ksp.sk/tasks/ls-uvod-tlacitka/}{Tlačítka}
 
 \section{Záver}
 
