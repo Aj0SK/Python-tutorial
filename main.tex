@@ -245,7 +245,7 @@ a, b = 10, 15
 print(a, b, end='')
 print(a)
 # Vystup:
-10 1510
+# 10 1510
 # Vysvetlenie:
 # Najskor prvy print vypise "10 15" (bez konca riadku)
 # a potom druhy print prida 10 (s koncom riadku).
@@ -258,9 +258,8 @@ print(a)
 
 \section{Podmienky}
 
-Často sa stane, že program potrebuje urobiť nejaké rozhodnutie. Program je vec, ktorá sa správa pri každom spustení rovnako, nie však na každom vstupe. To znamená, že ten istý vstup vždy spôsobí rovnaké správanie programu. Kedže ale programu pri rôznych spusteniach rôzne vstupy je nutné aby na ne program nejako zareagoval. Často napríklad chceme aby sa určitý kód spustil iba za splnenia nejakých podmienok. Príkladom môže byť program, ktorý vypíše, či číslo na vstupe je alebo nie je 0. Vhodným prostriedkom na dosiahnutie tohto správania programu je príkaz \texttt{if}. Ten
-zjednodušene vyzerá \texttt{if <podmienka>: <prikaz>}. To znamená, že ak platí \texttt{<podmienka>}
-vykonaj \texttt{<príkaz>}. \texttt{<podmienka>} je v tomto prípade akýkoľvek výraz vracajúci \texttt{bool}, teda True alebo False. \textbf{Nezabudnite}, že porovnávanie dvoch vecí sa vykonáva pomocou
+Často sa stane, že program potrebuje urobiť nejaké rozhodnutie. Program je vec, ktorá sa správa pri každom spustení rovnako. Nie však na každom vstupe. To znamená, že ten istý vstup vždy spôsobí rovnaké správanie programu. Kedže ale dávame programu pri rôznych spusteniach často rôzne vstupy, je nutné, aby na ne program nejako zareagoval. Často napríklad chceme aby sa určitý kód spustil iba za splnenia nejakých podmienok. Príkladom môže byť program, ktorý vypíše, či číslo na vstupe je alebo nie je 0. Vhodným prostriedkom na dosiahnutie tohto správania programu je príkaz \texttt{if} (ak). Ten zjednodušene vyzerá \texttt{if <podmienka>: <prikaz>}. To znamená, že ak platí \texttt{<podmienka>}
+vykonaj \texttt{<príkaz>}. \texttt{<podmienka>} je v tomto prípade akýkoľvek výraz vracajúci \texttt{bool} (teda \texttt{True} alebo \texttt{False}). \textbf{Nezabudnite}, že porovnávanie dvoch vecí sa vykonáva pomocou
 \textbf{dvoch} rovná sa \texttt{(==)} a nie jedného\texttt{(=)}.
 
 \lstlang{python}\begin{lstlisting}
@@ -271,7 +270,7 @@ if x != 0:
     print("Nie je to nula!")
 \end{lstlisting}
 
-V predchádzajúcom príklade je vidieť ešte jednu dôležitú vec a to odsadenie príkazov. Hovoríme o viditeľnej medzere v 3. a 5. riadku. Odsadením hovoríme pythonu, že tento príkaz patrí k predchádzajúcej podmienke. Je to dôležité z toho dôvodu, keby chceme napr. pri splnení prvej podmienky vykonať viac ako jeden príkaz. V tomto prípade by stačilo len dopísať rovnako odsadený príkaz:
+V predchádzajúcom príklade je vidieť ešte jednu dôležitú vec a to odsadenie príkazov. Hovoríme o viditeľnej medzere v 3. a 5. riadku. Odsadením hovoríme pythonu, že tento príkaz patrí k predchádzajúcej podmienke. Je to dôležité z dôvodu, keby chceme napr. pri splnení prvej podmienky vykonať viac ako jeden príkaz. V tomto prípade by stačilo len dopísať rovnako odsadený príkaz:
 
 \lstlang{python}\begin{lstlisting}
 # Program zisti, ci je na vstupe 0.
@@ -281,18 +280,19 @@ if x == 0:
     print("Vypisem este toto!")
     
 # Vstup1:
-0
+# 0
 # Vystup1:
-Je to nula!
-Vypisem este toto!
+# Je to nula!
+# Vypisem este toto!
 
 # Vstup2:
-3
+# 3
 # Vystup2:
-(prazdny)
+# (prazdny)
 \end{lstlisting}
 
-Ak by sme druhý výpis neodsadili, \texttt{Vypisem este toto!} by sa vypísalo aj pre nenulový vstup.
+Ak by sme druhý výpis neodsadili, \texttt{Vypisem este toto!} by sa vypísalo aj pre nenulový vstup. Odsadenie môžeme dosiahnúť pomocou stlačenia tabulátora.
+
 \lstlang{python}\begin{lstlisting}
 # Program zisti, ci je na vstupe 0.
 x = int(input())
@@ -301,15 +301,15 @@ if x == 0:
 print("Vypisem este toto!")
     
 # Vstup1:
-0
+# 0
 # Vystup1:
-Je to nula!
-Vypisem este toto!
+# Je to nula!
+# Vypisem este toto!
 
 # Vstup2:
-3
+# 3
 # Vystup2:
-Vypisem este toto!
+# Vypisem este toto!
 \end{lstlisting}
 
 Tak ako v predchádzajúcom príklade sa občas stane, že existujú práve 2 možnosti toho čo chceme urobiť. Vtedy je nápomocný konštrukt \texttt{if <podmienka>: <prikaz> else: <prikaz>}. Teda ak platí podmienka vykonáme prvý príkaz a ak nie tak druhý.
@@ -336,12 +336,10 @@ else:
 \end{lstlisting}
 Znova si všimnite, že každý príkaz za dvojbodkou je na samostatnom riadku a je odsadený od podmienky.
 
-% TODO (Žaba): neviem či by som namiesto x and y nepoužil formát <podmienka1> and <podmienka2>. Ten sa používal predtým, tu x a y môžu zvládzať k premenným.
-
 Podmienka je ľubovoľný výraz, ktorý vieme vyhodnotiť ako \texttt{True} alebo \texttt{False}.
 Takisto však vieme skladať viac výrazov pomocou logických spojok \texttt{and} a \texttt{or}.
-Výraz \texttt{x and y} sa vyhodnotí ako \texttt{True} ak sú obe podmienky x, y pravdivé. 
-Výraz \texttt{x or y} sa vyhodnotí ako \texttt{True} ak aspoň jedna z podmienok x, y je pravdivá.
+Výraz \texttt{<podmienka1> and <podmienka2>} sa vyhodnotí ako \texttt{True} ak sú obe podmienky pravdivé. 
+Výraz \texttt{<podmienka1> or <podmienka2>} sa vyhodnotí ako \texttt{True} ak aspoň jedna z podmienok je pravdivá.
 V podmienkach môžeme používať zátvorky na zvýšenie prehľadnosti poradia operácii.
 
 \lstlang{python}\begin{lstlisting}
@@ -386,7 +384,7 @@ while i <= 5:
   i += 1
 \end{lstlisting}
 
-% (fixed) TODO (Žaba): neviem či by som zrovna while ukazoval na príklade, na ktorý je for oveľa lepší. Takisto by sa mi páčila väčšia previazanosť s tou časťou podmienok. Nápad (z brucha, dá sa určite lepší vymyslieť). Chceme zistiť, či je číslo deliteľné 2, super to vieme ifoch. Čo však ak by sme chceli vedieť koľkokrát je deliteľné 2. Tak môžeme spraviť if, potom vydeliť 2 a potom ďalší if...Alebo to môžeme zaobaliť do while. Najlepšie ak by sa dalo skončiť časť s podmienkami pekným príkladom, ktorý potom tu sa rozšíri. Potom sa dá ukázať toto cez while a opäť prejsť k tomu, že for je na to lepší, lebo poznáme počet opakovaní.
+% TODO (Žaba): neviem či by som zrovna while ukazoval na príklade, na ktorý je for oveľa lepší. Takisto by sa mi páčila väčšia previazanosť s tou časťou podmienok. Nápad (z brucha, dá sa určite lepší vymyslieť). Chceme zistiť, či je číslo deliteľné 2, super to vieme ifoch. Čo však ak by sme chceli vedieť koľkokrát je deliteľné 2. Tak môžeme spraviť if, potom vydeliť 2 a potom ďalší if...Alebo to môžeme zaobaliť do while. Najlepšie ak by sa dalo skončiť časť s podmienkami pekným príkladom, ktorý potom tu sa rozšíri. Potom sa dá ukázať toto cez while a opäť prejsť k tomu, že for je na to lepší, lebo poznáme počet opakovaní.
 
 Príkaz \texttt{while} opakuje vykonávanie odsadených príkazov, \textit{pokiaľ} platí podmienka uvedená za kľúčovým slovom \texttt{while}. Teraz si toto správanie popíšeme na uvedenom programe. Program najskôr priradí 1 do premennej \texttt{i}. Následne sa pri príkaze \texttt{while} otestuje podmienka \texttt{i <= 5}, ktorá platí, pretože \texttt{i} obsahuje hodnotu 1. Vykoná sa preto príkaz \texttt{print(i)} a premenná \texttt{i} sa zvýši o 1 (\texttt{i += 1}). Následne sa znovu otestuje podmienka \texttt{i <= 5}, ktorá stále platí, pretože \texttt{i} obsahuje hodnotu 2. Takto program pokračuje ďalej až do stavu, kedy sa premenná \texttt{i} dostane na hodnotu 6. Vtedy sa podmienka \texttt{i <= 5} nesplní, odsadené príkazy pod cyklom sa nevykonajú a začnú sa vykonávať až príkazy nasledujúce za \texttt{while} cyklom. V tomto prípade náš program žiadne príkazy za cyklom nemá, takže skončí. 
 
