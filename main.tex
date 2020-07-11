@@ -1,7 +1,3 @@
-%Tu si môžete zaznačiť, že pracujete na danej veci. V prípade, že ste napísali len časť a ďalej už
-%nechcete, alebo ste hotoví tak sa odtiaľ odpíšte. Bolo by však fajn, aby jedu vec robil jeden
-%človek ak celok a zvyšný len kontrolovali
-%vypracuva: Andrej
 \documentclass{article}
 
 \input include/include.tex
@@ -18,15 +14,15 @@
 \tableofcontents
 \newpage
 
-Ahoj, pred oči sa ti dostal Python tutoriál napísaný pri príležitosti Online Školy Programovania 2020. Jeho autormi sú Roman a Andrej (Andrej a Roman), za proofread ďakujeme Žabovi. Ak v tutoriále nájdeš nejaké chyby alebo pasáže, ktoré sme nie zrovna dobre podali, neváhaj nás kontaktovať. Ako môžeš spoznať zle napísanú pasáž? Tak, že ani po niekoľkonásobnom prečítaní nerozumieš tomu, čo text, resp. kód znamená. Kontaktovať nás môžeš buď na Discorde pod nickom sobkulir a Aj0SK alebo na adresách andrejkorman@gmail.com a r.sobkuliak@gmail.com.
+Ahoj, pred oči sa Ti dostal Python tutoriál napísaný pri príležitosti Online Školy Programovania 2020. Jeho autormi sú Roman a Andrej (Andrej a Roman). Za korektúru a rozvrhnutie tutoriálu sme veľmi vďační Žabovi. Ak v tutoriále nájdeš nejaké chyby alebo pasáže, ktoré sme podľa teba nie zrovna dobre podali, neváhaj nás kontaktovať. Ako môžeš spoznať zle napísanú pasáž? Napríklad tak, že ani po niekoľkonásobnom prečítaní nerozumieš tomu, čo text, resp. kód znamená. Kontaktovať nás môžeš buď na Discorde pod nickom Aj0SK a sobkulir alebo na adresách andrejkorman@gmail.com a r.sobkuliak@gmail.com. Budeme Ti veľmi vďační.
 
 \section{Úvod}
-Predtým ako s Pythonom začneme, je dôležité zodpovedať niekoľko otázok. Prvá a najdôležitejšia je, čo je programovanie. Programovanie je vytváranie programov, ktoré na počítači vieme spustiť a majú nejakú funkciu. Príkladom programu môže byť aplikácia na četovanie, webový prehliadač ale aj niečo jednoduchšie, ako napríklad kalkulačka. Dôležité na programoch je, že majú vstup a výstup. Pre program fungujúci ako kalkulačka môže byť vstupom matematický výraz typu $5+3\cdot 7$ a výstupom hodnota tohto výrazu $26$. My sa v tomto tutoriále budeme venovať jednoduchým programom. V prípade kalkulačky na vašom počítači ste zrejme zvyknutí zadať matematiký výraz pomocou tlačidiel, teda nejakého grafického rozhrania (tlačidlá, okná a podobne). Takéto rozhranie naše programy nebudú mať, čo ich mimochodom značne skracuje. Vstup aj výstup bude teda v textovej podobe.
+Predtým ako s Pythonom začneme, je dôležité zodpovedať niekoľko otázok. Prvá a najdôležitejšia je, čo je programovanie. Programovanie je vytváranie programov, ktoré na počítači vieme spustiť a majú nejakú funkciu. Príkladom programu môže byť aplikácia na četovanie, webový prehliadač ale aj niečo jednoduchšie, ako napríklad kalkulačka. Dôležité na programoch je, že majú vstup a výstup. Pre program fungujúci ako kalkulačka môže byť vstupom matematický výraz typu $5+3\cdot 7$ a výstupom hodnota tohto výrazu $26$. My sa v tomto tutoriále budeme venovať jednoduchým programom. V prípade kalkulačky na vašom počítači ste zrejme zvyknutí zadať vstup teda nejaký matematiký výraz, pomocou tlačidiel, teda nejakého grafického rozhrania (tlačidlá, okná a podobne). Takéto rozhranie naše programy nebudú mať, čo ich mimochodom značne skracuje. Vstup aj výstup bude teda v textovej podobe.
 
-Keď už vieme čo je program a chceme programovať, potrebujeme vedieť ako taký program vytvoriť. Na to slúžia, ako už isto tušíte, programovacie jazyky. Tie nám dovoľujú vytvoriť postupnosť príkazov, ktoré po spustení daný program vykoná. Program od nás po spustení dostane nejaký vstup a vyprodukuje naň odpoveď (výstup), ktorú typicky nejako zobrazí, napr. vypíše.
+Keď už vieme čo je program, potrebujeme vedieť ako taký program vytvoriť. Na to slúžia, ako už isto tušíte, programovacie jazyky. Tie nám dovoľujú vytvoriť nejaký kód - postupnosť príkazov v danom jazyku, ktoré spolu tvoria program. Program od nás po spustení dostane nejaký vstup a vyprodukuje naň odpoveď (výstup), ktorú typicky nejako zobrazí, napr. vypíše.
 
 \subsection{Prečo Python?}
-Programovacích jazykov existuje neúrekom, my sme vybrali zrovna Python. Prečo? Myslíme si, že jeho príkazy sú prirodzené a zároveň je široko využívaný v praxi. Podľa \href{https://insights.stackoverflow.com/survey/2019#technology-_-programming-scripting-and-markup-languages}{dotazníku StackOverflow z roku 2019} je to druhý najpopulárnejší programovací jazyk. Python vám teda otvorí dvere do mnohých zákutí informatiky :)
+Programovacích jazykov existuje neúrekom. Prečo sme v tomto texte zvolili práve Python? Myslíme si, že jeho príkazy sú prirodzené a zároveň je široko využívaný v praxi. Podľa \href{https://insights.stackoverflow.com/survey/2019#technology-_-programming-scripting-and-markup-languages}{dotazníku StackOverflow z roku 2019} je to druhý najpopulárnejší programovací jazyk. Python vám teda otvorí dvere do mnohých zákutí informatiky :)
 
 \subsection{Inštalácia}
 Predtým, než napíšete svoj prvý program, musíte si Python nainštalovať. Existuje rada veľmi pokročilých nástrojov pre programovanie v Pythone. My s nimi zatiaľ pracovať nebudeme, pretože na úvod sú zbytočne komplikované.
@@ -46,15 +42,13 @@ print(7%3)
 \end{lstlisting}
 Následne program uložte pomocou \texttt{File -> Save} do ľubovoľného priečinku. Odporúčame vám, aby ste si vytvorili samostatný priečinok, do ktorého budete vaše programy ukladať. Teraz program môžete spustiť pomocou \texttt{Run -> Run Module} alebo stlačením \texttt{F5}. 
 
-Prvý riadok nie je nijak dôležitý ale je potrebné vysvetliť o čo ide. V kóde sa všetko považuje za príkaz a teda by v ňom bolo ťažké zanechať nejakú informáciu pre čitateľa. Na zanechanie komentára, teda nejakého textu pre človeka, ktorý kód číta slúži znak $\#$. Všetko čo napíšeme zaň sa považuje iba za komentár a Python to odignoruje. My vám za týmto znakom budeme zanechávať nejaké odkazy pre vaše lepšie porozumenie naším príkladom. A teraz už poďme na to podstatné.
+To čo vidíte vyššie je kód (postupnosť príkazov) tvoriaci veľmi jednoduchý program. Prvý riadok nie je nijak dôležitý ale je potrebné vysvetliť o čo ide. Občas chcete niekomu, kto po vás váš kod číta zanechať nejakú informáciu. Či už vysvetliť čo nejaká komplikovanejšia časť robí alebo upriamiť jeho pozornosť na niektoré príkazy. V kóde sa však všetko považuje za príkaz. Preto existujú tzv. komentáre - časti textu, ktoré sa nevykonávajú a slúžia pre potreby nás ľudí. Na zanechanie komentára slúži znak $\#$. Všetko čo napíšeme zaň sa považuje iba za komentár. Pri vykonávaní jednotlivých príkazov Python tieto komentáre ignoruje. My vám za týmto znakom budeme zanechávať nejaké odkazy pre vaše lepšie porozumenie naším príkladom. Teraz už poďme na to podstatné.
 
-V tomto programe používame funkciu \texttt{print}. Vieme asi uhádnuť, čo táto funkcia robí -- vypisuje na výstup to, čo je vo vnútri zátvoriek. Napriek tomu by však bolo vhodné vysvetliť, čo je \textit{funkcia}. Ak vám to nebude úplne jasné, nezúfajte, funkcie sú pomerne zložitá vec, ktorej sa bližšie venuje kapitola 10.
-Funkcia je nejaká menšia postupnosť príkazov, ktorá sa natoľko opakuje alebo je logicky ucelená, že dostala názov. Vlastne je to taký malý program v programe. Funkcii zväčša dáme niekoľko \textit{parametrov}, teda jej odovzdáme na čom má vykonať operáciu na ktorú je určená.
+V tomto programe používame funkciu \texttt{print}. Funkcia je nejaká menšia postupnosť príkazov, ktorá sa natoľko opakuje alebo je logicky ucelená, že dostala názov. Vlastne je to taký malý program v programe. Funkcii zväčša dáme niekoľko \textit{parametrov}, teda jej povieme na čom má vykonať operáciu na ktorú je určená. Vieme asi uhádnuť, čo táto konkrétna funkcia robí -- vypisuje (po anglicky print) na výstup to, čo je vo vnútri zátvoriek. Toto je zatiaľ všetko, čo vám treba o funkciách vedieť. Funkcie sú pomerne zložitá vec, ktorej sa bližšie venuje kapitola 10.
 
-Vyššie vidíme, že \texttt{print} je funkcia, ktorá má ako parameter to, čo chceme vypísať. Pozrite sa na výstup programu a zamyslite sa, ktoré riadky vás prekvapili. Je logické, že sa výraz $15 / 10$ nevyhodnotil na celé číslo. Špeciálnu pozornosť si zaslúži aj výraz $15 // 10$. Dve delenia v Pythone označujú často používané tzv. celočíselné delenie, teda delenie bezozvyšku. $x // y$ vieme interpretovať ako: "Najviac koľkokrát sa zmestí $y$ do $x$?" Inak povedané ide o klasické delenie s tým, že vynecháme všetko za desatinnou čiarkou.
-Zrejme je pre vás novým ešte výraz $7 \% 3$ kde \% označuje zvyšok po delení. Výsledkom tejto operácie je tá časť čísla čo z neho "ostane" po celočíselnom delení. $7\%3=1$ a to preto, že $7//3=2$ a to čo zostalo vieme vyjadriť ako $7 - 2 \cdot 3 = 1$.
+Vyššie vidíme, že \texttt{print} je funkcia, ktorá má ako parameter to, čo chceme vypísať. Program si spustite a pozrite sa na jeho výstup. Zamyslite sa, ktoré riadky vás prekvapili. Je logické, že sa výraz $15 / 10$ nevyhodnotil na celé ale desatinné číslo. Špeciálnu pozornosť si ale zaslúži výraz $15 // 10$. Dve znamienka delenia po sebe v Pythone označujú často používané tzv. celočíselné delenie, teda delenie bezozvyšku. $x // y$ vieme interpretovať ako: "Najviac koľkokrát sa zmestí $y$ do $x$?" Inak povedané ide o klasické delenie s tým, že vo vo výsledku vynecháme všetko za desatinnou čiarkou. Zrejme je pre vás novým ešte výraz $7 \% 3$ kde \% označuje zvyšok po celočíselnom delení. Výsledkom tejto operácie je tá časť čísla čo z neho "ostane" po celočíselnom delení. $7\%3=1$ a to preto, že $7//3=2$ a to čo zostalo vieme vyjadriť ako $7 - 2 \cdot 3 = 1$.
 
-V tomto programe sme si v skutočnosti iba ukázali, že \texttt{print} vie vypísať číslo. Všetky výrazy obsahujúce základné matematické operácie sa totiž priamo vyhodnotia na číslo a úlohou \texttt{print} je už len vypísať dané číslo. \texttt{print} vie ale toho samozrejme viac. Skopírujte si do vášho súboru s kódom nasledovný program:
+V tomto programe sme si v skutočnosti iba ukázali, že \texttt{print} vie vypísať číslo. Všetky výrazy ($7-10$, $5+2+7$ atď.) obsahujúce základné matematické operácie sa totiž priamo vyhodnotia na číslo ($-3$, $14$) a úlohou \texttt{print} je už len vypísať dané číslo. \texttt{print} vie ale toho samozrejme viac. Skopírujte si do vášho súboru s kódom nasledovný kód:
 
 \lstlang{python}\begin{lstlisting}
 print("Python tutorial!")
@@ -63,10 +57,9 @@ print(2 + 3)
 print("2" + "3")
 \end{lstlisting}
 
-Na prvom riadku vidíme, že vieme vypísať aj text. Takýto text v Pythone nazývame \textit{reťazec znakov} alebo skrátene \textit{reťazec}. Ide o znaky ohraničené úvodzovkami, teda \texttt{\textquotedbl<text>\textquotedbl} alebo \texttt{\textquotesingle<text>\textquotesingle}. Všimnite si, že nezavísi na tom, či použijeme "obyčajné úvodzovky", teda \texttt{\textquotedbl}, alebo apostrof, teda \textquotesingle. Najčastejšie keď hovoríme v Pythone o znakoch, myslíme tým anglickú abecedu, číslice, interpunkciu, zátvorky a podobne. V tomto texte vôbec nepracujeme s dĺžňami, mäkčeňmi a slovenskou abecedou.
+Znova si kód prezrite, spustite a porovnajte svoje očakávania s výsledkami na výstupe. Na prvom riadku vidíme, že vieme vypísať aj text. Takýto text v Pythone nazývame \textit{reťazec znakov} alebo skrátene \textit{reťazec}. Ide o znaky ohraničené úvodzovkami, teda \texttt{\textquotedbl<text>\textquotedbl} alebo \texttt{\textquotesingle<text>\textquotesingle}. Všimnite si, že nezavísi na tom, či použijeme "obyčajné úvodzovky", teda \texttt{\textquotedbl}, alebo apostrof, teda \textquotesingle. Najčastejšie keď hovoríme v Pythone o znakoch, myslíme tým anglickú abecedu, číslice, interpunkciu, zátvorky a podobne. V tomto texte vôbec nepracujeme s dĺžňami, mäkčeňmi a slovenskou abecedou.
 
-V druhom riadku vidíme, že podobne ako čísla, reťazce vieme sčítavať. Čo urobí znamienko plus v tomto prípade je, že zlepí reťazce za seba. Ako je možné, že výsledok 3. a 4. riadku sa líši? Dôvodom je, že v prvom prípade ide o plus aplikované na čísla. V druhom prípade sme aplikovali plus na reťazce. Python vidí, že naľavo aj napravo od plus sa nachádzajú čísla s úvodzovkami okolo čím sme dali najavo, že chceme tieto čísla reprezentovať ako reťazce a Pythonu teda neostáva nič iné, ako použiť plus pre reťazce.
-Keď sa pokúsime tieto dve reprezentácie skombinovať a 
+V druhom riadku vidíme, že podobne ako čísla aj reťazce vieme sčítavať. Čo urobí znamienko plus v tomto prípade je, že zlepí reťazce za seba. Ako je možné, že výsledok 3. a 4. riadku sa líši? Dôvodom je, že v prvom prípade ide o plus aplikované na čísla. V druhom prípade sme aplikovali plus na reťazce. Python vidí, že v 4. riadku sa naľavo aj napravo od plus nachádzajú čísla s úvodzovkami okolo, čím sme dali najavo, že chceme tieto čísla reprezentovať ako reťazce a Pythonu teda neostáva nič iné, ako použiť plus pre reťazce. Keď sa pokúsime tieto dve reprezentácie skombinovať a 
 napíšeme
 
 \lstlang{python}\begin{lstlisting}
@@ -81,22 +74,19 @@ tak spôsobíme chybu. Je to z dôvodu, že Python nerozumie ako má sčítať \
 
 \lstlang{python}\begin{lstlisting}
 print(2 * "Ahoj!")
-# Vystup: Ahoj!Ahoj!
 \end{lstlisting}
 
-Posledná vec, ktorá sa týka príkazu \texttt{print} je, že po tom, čo tento príkaz vypíše čo sme mu prikázali, ďalšie zavolanie funkcie \texttt{print} v rovnakom programe píše na ďalší riadok. Teraz vám niečo prezradíme. To, že text skočí na ďalší riadok je spôsobené tým, že sa v texte, ktorý vypisujete skrýva znak, ktorý nie je tlačiteľný, teda ho nie je vidieť ale spôsobí, že text za ním je na novom riadku. Tento znak vieme zapísať ako \texttt{\textbackslash n}. Vyskúšať si to môžete tak, že do programu napíšete príkaz:
+Posledná vec, ktorá sa týka príkazu \texttt{print} je, že po tom, čo tento príkaz vypíše čo sme mu prikázali, ďalšie zavolanie funkcie \texttt{print} v rovnakom programe píše na ďalší riadok. Teraz vám niečo prezradíme. To, že text skočí na ďalší riadok je spôsobené tým, že sa v texte, ktorý vypisujete skrýva znak, ktorý nepatrí medzi tzv. tlačiteľné znaky. Teda ho nie je pri vypisovaní vidieť ale spôsobí, že text za ním je už na novom riadku. Tento znak vieme zapísať ako \texttt{\textbackslash n}. Vyskúšať si to môžete tak, že do programu napíšete príkaz:
 
 \lstlang{python}\begin{lstlisting}
-print("Tu bude novy riadok->\n a aj tu->\n bol novy riadok.")
+print("Tu bude novy riadok->\n a aj tu->\nbol novy riadok.")
 # Vystup:
 # Tu bude novy riadok->
 #  a aj tu->
-#  bol novy riadok
+# bol novy riadok
 \end{lstlisting}
 
-% (fixed) TODO (Žaba): tu mi to príde, že strašne rýchlo a bez vysvetlenia sa pridajú parametre, ešte sa nestretli s tým, že čiarka a pomenované parametre. To by som nevysvetľoval asi do detailov, ale viac by som to spomenul.
-
-Funkcia \texttt{print} tak nerobí nič iné ako to, že pridá na koniec toho, čo chceme vypísať \texttt{\textbackslash n}. Tvorcovia funkcie \texttt{print} na to mysleli a pridali možnosť ako znak nového riadku pri výpise zmeniť. Funkcia \texttt{print} v zátvorkách vždy príjme jednu hodnotu. Túto hodnotu nazývame \textit{parameter}. Parametrov môže mať funkcia viac a oddeľujeme ich čiarkou. Funkcia \texttt{print} má druhý parameter, ktorým vieme ovládať čo bude na konci výpisu. Tento parameter je navyše \textit{pomenovaný}, a asi nás neprekvapí, že sa volá \texttt{end}. Ak by sme teda namiesto znaku nového riadku chceli na konci dve \texttt{X}, spravíme to nasledovne.
+Funkcia \texttt{print} tak nerobí nič iné ako to, že pridá na koniec toho, čo chceme vypísať \texttt{\textbackslash n}. Tvorcovia funkcie \texttt{print} mysleli na to, že možno za tým, čo vypíšeme nechceme dať znak konca riadka a pridali možnosť ako znak nového riadku pri výpise zmeniť. Funkcia \texttt{print} mala doteraz v zátvorkách za sebou iba jeden \textit{parameter} a to, čo má vypísať. Parametrov môže mať funkcia viac a oddeľujeme ich čiarkou. Funkcia \texttt{print} má druhý parameter, ktorým vieme ovládať čo bude na konci vypísaného textu. Tento parameter je navyše \textit{pomenovaný}, a asi nás neprekvapí, že sa volá \texttt{end}. Ak by sme teda namiesto znaku nového riadku chceli na konci dve \texttt{X}, spravíme to nasledovne.
 
 \lstlang{python}\begin{lstlisting}
 print("Toto cele", end="XX")
@@ -111,13 +101,13 @@ print("na rovnakom riadku.")
 # Zostavame na rovnakom riadku.
 \end{lstlisting}
 
-\nadpis{Priklady}
+\nadpis{Príklady}
 
-Na konci kapitoly nájdeš vždy sadu úloh, ktoré by si si mal vyriešiť predtým ako budeš pokračovať. Úlohy slúžia na preverenie tvojich schopností a zväčša sa stupňujú v obtiažnosti. V tejto kapitole sme si pre teba prichystali iba jednu úlohu: \href{https://testovac.ksp.sk/tasks/ls-uvod-ahoj/}{Ahoj}
+Na konci kapitoly nájdeš vždy sadu úloh, ktoré by si si mal predtým ako budeš pokračovať vyriešiť. Úlohy slúžia na preverenie tvojich schopností a zväčša sa stupňujú v obtiažnosti. V tejto kapitole sme si pre teba prichystali iba jednu úlohu: \href{https://testovac.ksp.sk/tasks/ls-uvod-ahoj/}{Ahoj}
 
-Zrejme si však nikdy ešte neodovzával program na náš testovač a tak ti celý proces v skratke vysvetlíme. Testovač je náš server, kam pošleš svoj program, ktorý rieši nejakú úlohu. Náš testovač tvoj program spustí na rôznych vstupoch a zistí, či robí naozaj to, čo sa v zadaní požaduje. Poďla toho ho ohodnotí OK, WA (wrong answer, nesprávna odpoveď), prípadne nejak inak. Všetky možné výsledky odovzdávania nájdeš v sekcii \texttt{Odpovede testovača}. Neboj sa, o nič nejde a môžeš odovzdávať ľubovoľne veľakrát. Neodporúčame ti ale zaseknúť sa a hodinu riešiť ten istý príklad. Pokiaľ ti príklad nejde a začínaš byť frustrovaný ozvi sa na \href{https://discord.gg/QKgNmW9}{Discorde} v časti začiatočníci alebo napíš priamo jednému z užívaťeľov sobkulir a Aj0SK a my ti radi poradíme.
+Zrejme si však nikdy ešte neodovzával program na náš testovač a tak ti celý proces v skratke vysvetlíme. Testovač je náš server, kam pošleš svoj program, ktorý rieši nejakú úlohu. Náš testovač tvoj program spustí na rôznych vstupoch a zistí, či robí naozaj to, čo sa v zadaní požaduje. Poďla toho ho ohodnotí OK, WA (wrong answer, nesprávna odpoveď), prípadne nejak inak. Všetky možné výsledky odovzdávania nájdeš v sekcii \texttt{Odpovede testovača}. Neboj sa, o nič nejde a môžeš odovzdávať ľubovoľne veľakrát. Neodporúčame ti ale zaseknúť sa a hodiny riešiť ten istý príklad. Pokiaľ ti príklad nejde a začínaš byť frustrovaný ozvi sa na \href{https://discord.gg/QKgNmW9}{Discorde} v časti začiatočníci alebo napíš priamo jednému z užívaťeľov sobkulir alebo Aj0SK a my ti radi poradíme.
 
-Teraz už k tomu ako odovzdať svoj program na testovač. Roman pripravil krátky \href{https://www.youtube.com/watch?v=RV5uoLwQDsg}{videotutoriál}. Testovač nájdeš na adrese \href{https://testovac.ksp.sk/}{testovac.ksp.sk}. Prvýkrát zvoľ možnosť \texttt{Zaregistruj sa} a zaregistruj sa ako na hocijakej inej stránke. Po prihlásení sa môžeš stránkou preklikávať pomocou panelu naľavo. Keď sa rozhodneš riešiť, prejdi pomocou panelu naľavo do časti \texttt{Úlohy}
+Teraz už k tomu ako odovzdať svoj program na testovač. Roman pripravil krátky \href{https://www.youtube.com/watch?v=RV5uoLwQDsg}{videotutoriál}. Testovač nájdeš na adrese \href{https://testovac.ksp.sk/}{testovac.ksp.sk}. Prvýkrát zvoľ možnosť \texttt{Zaregistruj sa} a zaregistruj sa ako na hocijakej inej stránke. Po prihlásení sa môžeš stránkou preklikávať pomocou panelu naľavo. Keď sa rozhodneš riešiť, prejdi pomocou panelu naľavo do časti \texttt{Úlohy}.
 
 \begin{figure}[h]
 \includegraphics[width=4cm]{lavypanel}
@@ -151,10 +141,10 @@ x = 4   # do krabicky x vlozime cislo 4
 Neskôr potom vieme použiť hodnotu v tejto krabičke napríklad takto:
 
 \lstlang{python}\begin{lstlisting}
-print(4*x)   # pri vyhodnocovani vyrazu sa x nahradi 4
+print(5*x)   # pri vyhodnocovani vyrazu sa x nahradi za stvorku
 \end{lstlisting}
 
-Do krabičky môžeme hodnotu vložiť a použiť ju aj opakovane.
+Do krabičky môžeme hodnotu vložiť a aj ju použiť opakovane.
 
 \lstlang{python}\begin{lstlisting}
 a = 10
@@ -163,7 +153,7 @@ a = 7
 print(4*x)   # vypise: 28
 \end{lstlisting}
 
-Zatiaľ sme zatajili ako sa taká premenná vytvára. Tajomstvom je, že python premennú vytvorí automaticky keď jej prvý krát priradíme nejakú hodnotu. Na vytvorenie premennej a priradenie hodnoty do nej teda stačí napísať:
+Zatiaľ sme zatajili ako sa taká premenná vytvára. Tajomstvom je, že Python premennú vytvorí automaticky keď jej prvý krát priradíme nejakú hodnotu. Na vytvorenie premennej a priradenie hodnoty do nej teda stačí napísať:
 
 \lstlang{python}\begin{lstlisting}
 a = 4   # do a priradime 4, premenna a sa pritom vytvori
@@ -172,7 +162,7 @@ c, d = 10, 12   # vieme robit aj viac priradeni naraz (c = 10 a d = 12)
 a = 8 # zmenili sme hodnotu a, teraz sa uz premenna znova nevytvorila
 \end{lstlisting}
 
-Na začiatku sme hovorili, že do premennej si program ukladá dáta avšak doteraz sme iba ukázali, ako do premennej vložiť číslo. Rôzne typy dát sa nazývajú v programovacích jazykoch aj \texttt{typy}. My sme sa zatiaľ v tomto tutoriále skryto stretli s dvomi typmi. Prvým bolo celé číslo alebo tiež \texttt{int}. Druhým reťazec alebo \texttt{string}. V nasledujúcej tabuľke prinášame aké základné typy v Pythone existujú.
+Na začiatku sme hovorili, že do premennej si program ukladá dáta avšak doteraz sme iba ukázali, ako do premennej vložiť číslo. Podľa toho, aký typ dát práve premenná v sebe ukladá hovoríme aj o jej \texttt{type}. My sme sa zatiaľ v tomto tutoriále skryto stretli s tromi typmi. Prvým bolo celé číslo alebo tiež \texttt{int}. Druhým bolo desatinné číslo alebo aj \texttt{float}. Tretím reťazec alebo \texttt{string}. V nasledujúcej tabuľke prinášame aké základné typy v Pythone existujú.
 
 \smallskip
 \begin{tabular}{|l|l|l|l|}
@@ -186,15 +176,15 @@ string & reťazec znakov & "abc", 'abc' \\ \hline
 \end{tabular}
 \smallskip
 
-Ďalším dôležitým pojmom je \texttt{operátor}. Spomenuli sme si už premenné aj to, že majú rôzne typy a vieme ich použiť v akýchsi výrazoch. Pod výrazom myslíme napr. $5\*x + 20 + y$. Tento výraz sa vyhodnotí a vráti sa nám číslo a teda by sme vedeli napísať napr. $vysledok = 5\*x + 20 + y$. V tomto výraze používame operátor $+$ dva krát. $+$ vezme vec napravo, naľavo, sčíta ich a vráti nám výsledok. Python má samozrejme viac operátorov. Niektoré už poznáte ako napr. $-$, $//$, $*$... Vieme už aj o tom, že rovnaký operátor môže fungovať inak keď má napravo a naľavo iné typy a teda vracia aj rôzne typy.
+Ďalším dôležitým pojmom je pojem \texttt{operátor}. Spomenuli sme si už premenné a aj to, že majú rôzne typy a vieme ich použiť v zložitejších výrazoch. Pod výrazom myslíme napr. $5\*x + 20 + y$. Tento výraz sa vyhodnotí a jeho výsledok sa nám vráti ako číslo. Vedeli by sme teda napísať napr. $vysledok = 5\*x + 20 + y$. V tomto výraze používame napr. operátor $+$ a to hneď dva krát. $+$ vezme vec napravo, naľavo, sčíta ich a vráti nám výsledok. Python má samozrejme viac operátorov. Niektoré už poznáte ako napr. $-$, $//$, $*$... Vieme už aj o tom, že rovnaký operátor môže fungovať inak keď má napravo a naľavo iné typy a teda vracia aj rôzne typy.
 
 \lstlang{python}\begin{lstlisting}
-a, b = 2, 12
-c = a+b # c bude 14, + tu vracia cele cislo
+a, b = 2, 12 # do a prirad 2 a do b prirad 12
+c = a + b # c bude 14, + tu vracia cele cislo
 r1 = "Ano"
 r2 = "Nie"
-r3 = r1 + r2 # r3 bude "AnoNie", + vracia retazec
-r4 = a * r1 # r4 bude "AnoAno", + vracia retazec
+r3 = r1 + r2 # r3 bude "AnoNie", lebo + tu vracia retazec
+r4 = a * r1 # r4 bude "AnoAno", lebo + tu vracia retazec
 \end{lstlisting}
 
 Aké ešte operátory existujú? Dôležitým typom v programovaní je typ \texttt{bool}. Ten môže reprezentovať iba dve hodnoty a to \texttt{True} a \texttt{False}. Dôležitosť tohto typu sa naplno prejaví v kapitole o podmienkach. Príklad použitia:
@@ -206,7 +196,7 @@ print(a)
 print(b)
 \end{lstlisting}
 
-Operátory, ktorým sme sa doteraz venovali vracali buď celé číslo alebo reťazec. Dôležitými operátormi sú aj tie, ktoré vracajú bool a to $==$ a $!=$. Prvý funguje ako porovnanie, vráti True vtedy keď sa vec napravo a naľavo rovnajú. Druhý je jeho presnou negáciou a teda opakom, vrátu True ak sa vec napravo a naľavo nerovnajú. Príklady použitia:
+Operátory, ktorým sme sa doteraz venovali vracali buď celé číslo, desatinné číslo alebo reťazec. Dôležitými operátormi sú aj tie, ktoré vracajú bool a to $==$ a $!=$. Prvý funguje ako porovnanie, pričom vráti \texttt{True} vtedy keď sa vec napravo a naľavo rovnajú. Druhý je jeho presným opakom, teda  vrátu \texttt{True} ak sa vec napravo a naľavo nerovnajú. Príklady použitia:
 
 \lstlang{python}\begin{lstlisting}
 a, b = 5, 10
@@ -216,32 +206,30 @@ e = (a!=b) # v e je True
 # pre citatelnost sme vyrazy napravo od = dali do zatvorky
 \end{lstlisting}
 
-Ďalšími užitočnými operátoromi, vracajúcimi bool sú $<$, $>$, $>=$ a $<=$. Príklad použitia.
+Ďalšími užitočnými operátoromi, vracajúcimi \texttt{bool} sú $<$, $>$, $>=$ a $<=$. Príklad použitia.
 
 \lstlang{python}\begin{lstlisting}
-vysl1 = 5>3 # vysl1 bude True
-vysl2 = 7<=8 # vysl2 bude True
+a = 5>3 # a bude True
+b = 7<=8 # b bude True
 \end{lstlisting}
 
 \section{Načítavanie vstupu a výpis výstupu}
 
 % TODO (Žaba): tá vec so zmenou by sa mi dosť páčila príkladovo spraviť. Že vyskúšajme si vyriešiť že máš číslo a vypočítaj obsah štvorca s takou hranou, spravíš reťazec*reťazec, dostaneš chybovú hlášku peknú a na tom vysvetlíš, že aha, toto je zle a takto fixnem.
 
-%TODO (Žaba): chýba načítanie viacerých čísel na riadku (aj konštantne veľa), či to nové úlohy už nebudú mať? Tak či tak, možno spomenúť viac riadkov, to tu tuším nie je. Vidím, že sa to nižšie spomína, ale to už je asi neskoro vzhľadom na príklady?
-
-Na načítavanie používame funkciu \texttt{input}. Po jej použití program načíta jeden riadok zo vstupu
-a vráti nám ho ako \textit{reťazec (string)}. My si musíme samozrejme tento reťazec niekam uložiť. Treba si dať pozor na to, že načítaný vstup je reťazec. Ak chceme so vstupom pracovať ako s číslom, musíme ho najskôr \textit{skonverťovať} (premeniť) na číslo pomocou funkcie \texttt{int}.
-
-% TODO (Žaba): tu sú zrazu spomenuté "premenné" ale nikdy predtým sme nevideli ako viac vecí vypísať a asi sa to nedovtípia sami. Buď to niekde doplniť, alebo tu vynechať.
+Na načítavanie zo vstupu používame funkciu \texttt{input}. Po jej použití program načíta jeden riadok zo vstupu
+a vráti nám ho ako \textit{reťazec (string)}. My si musíme samozrejme tento reťazec niekam uložiť. Treba si dať pozor na to, že načítaný vstup je reťazec. Ak chceme so vstupom pracovať ako s číslom, musíme ho najskôr \textit{skonverťovať} (premeniť) na celé číslo pomocou funkcie \texttt{int}.
 
 \lstlang{python}\begin{lstlisting}
 a = input() # nacita jeden riadok zo vstupu a ulozi ho do premennej a typu string(retazec)
-# Chyba! Premenna a obsahuje string, 10 je int.
-print(a + 10)
+print(a + 10) # Chyba! Premenna a obsahuje string, 10 je int.
+\end{lstlisting}
 
-b = int(input()) # ak chceme vytvorit premennu b, typu int, musime retazec skonvertovat na cislo
-# Ok, obe premenne su typu int.
-print(b + 10)
+V predchádzajúcom príklade vidíme nesprávne použitie funkcie \texttt{input}. Ak si ešte spomínate na funkcie a ich parametre, môžete vidieť, že tejto funkcii sme žiadne parametre nedali(v jej zátvorkách sa nič nenachádza). To, čo robíme na prvom riadku síce je správne ale v druhom riadku sa prejaví chyba, ktorú sme nezamýšľali urobiť. Do $a$ sme chceli načítať číslo a v skutočnosti sme doň načítali iba reťazec. Aby sme mohli s premennou $a$ pracovať ako s číslom, musíme výstup, teda to čo nám funkcia \texttt{input} vrátila a je typu reťazec, prekonvertovať na int, teda typ celé číslo. Na to použijeme funkciu \texttt{int}, ktorá to, čo jej zadáme ako parameter premení na int a vráti nám to.
+
+\lstlang{python}\begin{lstlisting}
+a = int(input()) # ak chceme vytvorit premennu a, typu int, musime retazec skonvertovat na cislo
+print(a + 10) # Ok, premenna aj hodnota, ktoru pricitavame je typu int.
 \end{lstlisting}
 
 Na vypisovanie opäť použijeme funkciu \texttt{print}.
@@ -388,7 +376,7 @@ print(4)
 print(5)
 \end{lstlisting}
 
-\subsubsection{While cyklus}
+\subsection{While cyklus}
 Ako asi už tušíte, musí to ísť aj krajšie. Použijeme preto cyklus \texttt{while} (po slovensky \textit{pokiaľ}).
 \lstlang{python}\begin{lstlisting}
 # Vypis cisel od 1 do 5.
@@ -527,12 +515,12 @@ for i in range(n):
   print(vstup[i])
 
 # Napriklad pre vstup:
-3
-1
-2
-3
+# 3
+# 1
+# 2
+# 3
 # Vyda program vystup (tu skratene do jedneho riadku):
-1 2 3
+# 1 2 3
 \end{lstlisting}
 
 Tento program je možno najkomplexnejší, s ktorým sme sa zatiaľ v tomto návode stretli. Na začiatku načíta číslo $n$, počet čísel, ktoré budú nasledovať na samostatných riadkoch. Následne v cykle od $0$ po $n - 1$ (vrátane) načíta vždy jedno číslo \texttt{int(input())} a pripojí ho do listu $vstup$ pomocou \texttt{append}.
@@ -560,14 +548,14 @@ vstup = [1, 2, 3]
 for x in vstup:
     print(x)
 # Vystup (skrateny na jeden riadok):
-1 2 3
+# 1 2 3
 \end{lstlisting}
 
 Príklady vyššie počítali s tým, že čísla dostaneme rozdelené do riadkov. Čo ak by sme $n$ čísel dostali na jedinom riadku? Funkcia \texttt{input} by ich všetky načítala do jedného reťazca a funkcia \texttt{int} by zlyhala, pretože vie skonvertovať iba \textbf{jedno číslo z reťazca}, nie viacero.
 \lstlang{python}\begin{lstlisting}
 # Program dostane cislo n, pocet cisel, ktore budu nasledovat
 # na dalsom riadku oddelene medzerou.
-n = input()
+n = int(input())
 cisla = input()
 int(input())
 # Chyba!
@@ -582,23 +570,28 @@ int(input())
 Pomôžeme si preto metódou \texttt{split}, ktorá rozseká čísla v reťazci podľa medzier a vráti pole obsahujúce jednotlivé čísla (ako reťazce!).
 \lstlang{python}\begin{lstlisting}
 # Program dostane cislo n, pocet cisel, ktore budu nasledovat
-# na dalsom riadku oddelene medzerou.
-n = input()
+# na dalsom riadku, oddelene medzerou.
+n = int(input())
+# premenna cisla bude obsahovat cely riadok vstupu ako string,
+# napriklad '3 4 5'
 cisla = input()
-# rozsekaneStr, pretoze su to stringy
-rozsekaneStr = cisla.split()
-print(f'rozsekaneStr: {rozsekaneStr}')
 
-# Z jednotlivych stringov potrebujeme dostat inty
+# rozsekaneStr bude obsahovat jednotlive cisla v poli ako stringy,
+# pretoze metoda split rozdeli obsah premennej cisla podla medzier.
+# Napriklad: ['3', '4', '5']
+rozsekaneStr = cisla.split()
+
+# Z jednotlivych stringov v poli rozsekaneStr potrebujeme dostat inty.
+# Napriklad: [3, 4, 5]
 rozsekaneInt = []
 for x in rozsekaneStr:
   rozsekaneInt.append(int(x))
-  
+
 print(rozsekaneInt)
 
 # Vstup:
-3 
-3 4 5
+# 3 
+# 3 4 5
 # Vystup:
 # rozsekaneStr: ['3', '4', '5']
 # rozsekaneInt: [3, 4, 5]
@@ -638,11 +631,11 @@ for i in range(n):
 print() # novy riadok
 
 # Vstup:
-3
+# 3
 # Vystup:
- 0 1 2
- 0 1 2
- 0 1 2
+# 0 1 2
+# 0 1 2
+# 0 1 2
 \end{lstlisting}
 V tomto programe uvádzame nový konštrukt pre tvorbu reťazca \texttt{f'text \{<premenna>\} text \{<premenna>\}'}. Pomocou uvedenia reťazca so znakom \texttt{f} povolíte tzv. \textit{interpoláciu} premenných pomocou kučeravých zátvoriek. V reťazci sa tak objaví hodnota premennej na mieste, kde bol jej názov v kučeravých zátvorkách. Napríklad \texttt{f'Toto je \{meno\}. Jeho obľúbené zviera je \{zviera\}.'}.
 
@@ -656,11 +649,11 @@ for i in range(3):
   print() # novy riadok
 
 # Vstup:
-3
+# 3
 # Vystup:
- 0 1 2
- 0 1 2
- 0 1 2
+# 0 1 2
+# 0 1 2
+# 0 1 2
 \end{lstlisting}
 Dva cykly od seba v označení oddelíme tak, že cyklus opakujúci sa $3$-krát nazveme \textit{vonkajší} a cyklus v ňom nazveme \textit{vnútorný}. Všimnite si, že vnútorný cyklus musí použiť inú premennú ako $i$, pretože inak by došlo ku kolízii mien a vonkajší cyklus by mohol byť ovplyvnený vnútorným. Vo vnútornom cykle sme preto použili názov $j$.
 Vždy, keď sa začne vykonávať telo vonkajšieho cyklu, spustí sa znovu vnútorný cyklus vypisujúci čísla od $0$ po $n - 1$.
@@ -715,17 +708,17 @@ for i in range(8):
     print(i, j)
 
 # Vystup:
-0 0
-0 1
-...
-0 7
-1 0
-...
-3 1
-# 3 2 sa nevypise, ale program pokracuje (chyba!)
-4 0
-4 1
-...
+# 0 0
+# 0 1
+# ...
+# 0 7
+# 1 0
+# ...
+# 3 1
+# ! 3 2 sa nevypise, ale program pokracuje (chyba!)
+# 4 0
+# 4 1
+# ...
 \end{lstlisting}
 
 V prípade, že by sme v príklade vyššie použili \texttt{continue} namiesto \texttt{break} by ďalšia vypísana dvojica bola po vynechanej ($3$ $2$) bola
@@ -766,7 +759,7 @@ for zviera in zvierata:
   print(zviera[0])
 
 # Vystup (skrateny na jeden riadok):
-Bax Kralovna Fero
+# Bax Kralovna Fero
 \end{lstlisting}
 Vo for cykle prejdeme cez vsetky \texttt{zvierata}. Premenná \texttt{zviera} bude preto postupne obsahovať polia \texttt{["Bax", "pes", "ciernobiely"]} až
 \texttt{["Fero", "kocur", "hnedobiely"]}. Z týchto polí potom vypisujeme $0$-tú hodnotu, čo je meno.
@@ -793,16 +786,16 @@ for i in range(m):
 print(tabulka)
 
 # Vstup:
-3 4
-1 2 3 4
-5 6 7 8
-9 10 11 12
+# 3 4
+# 1 2 3 4
+# 5 6 7 8
+# 9 10 11 12
 # Vystup:
-[
- [1, 2, 3, 4],
- [5, 6, 7, 8],
- [9, 10, 11, 12]
-]
+# [
+#  [1, 2, 3, 4],
+#  [5, 6, 7, 8],
+#  [9, 10, 11, 12]
+# ]
 \end{lstlisting}
 
 \subsection{Príklady}
@@ -835,7 +828,7 @@ else:
 Toto síce docieli to čo chceme avšak za následok to bude mať aj dlhší, neprehľadnejší kód s viac miestami kde sa môžeme pomýliť. Nezúfajte, zachránia nás funkcie. Horný program môžeme ekvivalentne zapísať aj krajšie:
 
 \lstlang{python}\begin{lstlisting}
-def vypisParitu(cislo)
+def vypisParitu(cislo):
     if cislo%2 == 0:
         print("Parne cislo.")
     else:
@@ -855,7 +848,7 @@ Ak si predchádzajúce dva príklady porovnáte, malo by vám byť intuitívne j
 Okrem toho, že si funkcie berú parametre, vedia niečo aj vracať. Funkcia vyššie nič nevracia. Ak by sme ale chceli vidieť príklad toho, ako môže funkcia niečo vracať, môže to vyzerať takto.
 
 \lstlang{python}\begin{lstlisting}
-def scitaj(a, b)
+def scitaj(a, b):
     return a+b
 # pouzitie:
 x, y = 10, 20
@@ -895,7 +888,7 @@ print(a)
 
 \section{Záver}
 
-Super! Ak si to dotiahol až sem a popri tom urobil všetky úlohy tak máš solídne základy v jazyku Python. Veríme, že tvoja programátorská cesta tu nekončí. Čaká ťa totiž veľa zaujimávych príležitostí, kde svoju znalosť jazyka Python môžeš ďalej prehĺbiť. Ďakujeme, že si čítal náš tutoriál a najväčším poďakovaním bude ak nám povieš, čo v ňom môžeme zlepšiť aby sa ďalším čitateľom čítal jednoduchšie. Kontaktovať nás môžeš buď na Discorde pod nickom sobkulir a Aj0SK alebo na adresách andrejkorman@gmail.com a r.sobkuliak@gmail.com. Tiež nás kontaktuj ak nevieš kam s tvojimi znalosťami ďalej :)
+Super! Ak si to dotiahol až sem a popri tom urobil všetky úlohy tak máš solídne základy v jazyku Python. Veríme, že tvoja programátorská cesta tu nekončí. Čaká ťa totiž veľa zaujimávych príležitostí, kde svoju znalosť jazyka Python môžeš ďalej prehĺbiť. Ďakujeme, že si čítal náš tutoriál a najväčším poďakovaním bude ak nám povieš, čo v ňom môžeme zlepšiť aby sa ďalším čitateľom čítal jednoduchšie. Kontaktovať nás môžeš buď na \href{https://discord.gg/QKgNmW9}{Discorde} pod nickom Aj0SK a sobkulir alebo na adresách andrejkorman@gmail.com a r.sobkuliak@gmail.com. Tiež nás kontaktuj ak nevieš kam s tvojimi znalosťami ďalej :)
 
 % \nadpis{Slovník}
 % argument
