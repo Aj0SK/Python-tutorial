@@ -1,4 +1,4 @@
-\documentclass{article}
+%\documentclass{article}
 
 \input include/include.tex
 \usepackage{hyperref}
@@ -645,7 +645,6 @@ for i in range(3):
   for j in range(n):
     print(f' {j}', end='')
   print() # novy riadok
-
 # Vstup:
 # 3
 # Vystup:
@@ -662,7 +661,7 @@ Predstavte si teraz, že chceme vytvoriť malú tabuľku násobilky do $4$. Tabu
 \begin{center}
 \renewcommand\arraystretch{1.3}
 \setlength\doublerulesep{0pt}
-\begin{tabular}{r||*{4}{2|}}
+\begin{tabular}{ c || c | c | c | c | }%{r||*{4}{2|}}
 * & 1 & 2 & 3 & 4 \\
 \hline\hline
 1 & 1 & 2 & 3 & 4 \\ 
